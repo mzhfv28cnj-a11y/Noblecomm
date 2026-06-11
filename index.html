@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noble Comm — Fiber Optic Installation Services | Iowa & the Midwest</title>
+<meta name="description" content="TSVIT LLC dba Noble Comm provides FTTH fiber optic installation, splicing, testing, and service activation across Iowa and the Midwest. 5,000+ documented installations. Fully insured.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F2B40; --fiber:#1B7FA8; --pulse:#5BC8E8; --paper:#F7FAFC;
+    --slate:#3D4C59; --line:#BFD0DB; --safety:#E8762C;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Source Sans 3',sans-serif;color:var(--slate);background:var(--paper);line-height:1.6;font-size:17px}
+  h1,h2,h3{font-family:'Archivo',sans-serif;color:var(--ink);line-height:1.12}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--fiber);display:block;margin-bottom:14px}
+
+  /* top bar */
+  header{background:var(--ink);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(91,200,232,.25)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;color:#fff;letter-spacing:.06em;text-decoration:none}
+  .wordmark span{color:var(--pulse)}
+  .wordmark small{display:block;font-family:'IBM Plex Mono',monospace;font-weight:400;font-size:10px;letter-spacing:.22em;color:#8FA8BA;margin-top:1px}
+  nav a{color:#C9DAE6;text-decoration:none;font-size:15px;margin-left:26px}
+  nav a:hover,nav a:focus{color:var(--pulse)}
+  @media(max-width:700px){nav{display:none}}
+
+  /* hero with fiber pulse */
+  .hero{background:linear-gradient(165deg,#0F2B40 0%,#123750 60%,#15425F 100%);color:#fff;padding:96px 0 84px;position:relative;overflow:hidden}
+  .hero h1{color:#fff;font-size:clamp(38px,6vw,62px);font-weight:800;max-width:760px;letter-spacing:-.01em}
+  .hero h1 em{font-style:normal;color:var(--pulse)}
+  .hero p.lead{max-width:640px;margin:22px 0 36px;font-size:19px;color:#C9DAE6}
+  .fiber-line{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(91,200,232,.18)}
+  .fiber-line::after{content:"";position:absolute;top:0;bottom:0;width:160px;background:linear-gradient(90deg,transparent,var(--pulse),transparent);animation:pulse 4.5s linear infinite}
+  @keyframes pulse{from{left:-160px}to{left:100%}}
+  @media(prefers-reduced-motion:reduce){.fiber-line::after{animation:none}}
+  .cta{display:inline-block;background:var(--safety);color:#fff;font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;padding:15px 32px;border-radius:0;text-decoration:none;letter-spacing:.04em;text-transform:uppercase}
+  .cta:hover{background:#D6661F}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(91,200,232,.35);border:1px solid rgba(91,200,232,.35);margin-top:64px}
+  .stat{background:#0F2B40;padding:24px 18px}
+  .stat b{font-family:'IBM Plex Mono',monospace;font-size:30px;font-weight:500;color:var(--pulse);display:block;line-height:1.1}
+  .stat span{font-size:12px;color:#8FA8BA;text-transform:uppercase;letter-spacing:.14em}
+  @media(max-width:700px){.stats{grid-template-columns:1fr 1fr}}
+
+  section{padding:84px 0}
+  section h2{font-size:clamp(28px,4vw,38px);font-weight:800;margin-bottom:18px}
+  .intro{max-width:720px;margin-bottom:48px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+  .svc{background:#fff;border:1px solid var(--line);border-top:4px solid var(--fiber);padding:26px 24px;border-radius:0}
+  .svc h3{font-size:18px;margin-bottom:10px;letter-spacing:-.01em}
+  .svc ul{list-style:none}
+  .svc li{padding:5px 0 5px 18px;position:relative;font-size:15.5px}
+  .svc li::before{content:"";position:absolute;left:0;top:13px;width:8px;height:2px;background:var(--pulse)}
+
+  /* track record */
+  .dark{background:var(--ink);color:#C9DAE6}
+  .dark h2,.dark h3{color:#fff}
+  .timeline{border-left:2px solid rgba(91,200,232,.35);margin-top:40px}
+  .tl{padding:0 0 36px 30px;position:relative}
+  .tl:last-child{padding-bottom:0}
+  .tl::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--ink);border:2px solid var(--pulse)}
+  .tl .when{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--pulse);letter-spacing:.08em}
+  .tl h3{font-size:19px;margin:6px 0 6px}
+  .tl p{max-width:640px;font-size:15.5px}
+
+  /* credentials */
+  .cred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+  .cred{background:#fff;border:1px solid var(--line);border-left:4px solid var(--ink);padding:26px 24px;border-radius:0}
+  .cred h3{font-size:17px;margin-bottom:8px}
+  .cred p{font-size:15.5px}
+  .cred .mono{font-size:12px;color:var(--fiber);letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:10px}
+
+  /* service area */
+  .states{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .state{font-family:'IBM Plex Mono',monospace;font-size:14px;border:1px solid var(--ink);background:#fff;padding:10px 18px;border-radius:0;color:var(--ink)}
+  .state.home{background:var(--ink);border-color:var(--ink);color:#fff}
+
+  /* contact */
+  .contact{background:linear-gradient(165deg,#123750,#0F2B40);color:#C9DAE6;position:relative;overflow:hidden}
+  .contact h2{color:#fff}
+  .contact a.mail{color:var(--pulse);font-family:'IBM Plex Mono',monospace;font-size:20px;text-decoration:none;border-bottom:1px solid rgba(91,200,232,.4)}
+  .contact .detail{margin-top:26px;font-size:15.5px}
+
+  footer{background:#0A1F30;color:#7E96A8;font-size:13.5px;padding:26px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  a:focus-visible,.cta:focus-visible{outline:3px solid var(--pulse);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="#top">NOBLE<span>COMM</span><small>FTTH SERVICES · IOWA</small></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">FTTH Installation · Splicing · Activation</span>
+    <h1>Fiber to the home, <em>connected right</em> the first time.</h1>
+    <p class="lead">Noble Comm is an Iowa-based fiber optic services company delivering FTTH installations, premises wiring and splicing, CPE and WiFi setup, testing, and full service activation for broadband providers and prime contractors across the Midwest.</p>
+    <a class="cta" href="#contact">Work with us</a>
+    <div class="stats">
+      <div class="stat"><b>5,000+</b><span>Documented installs</span></div>
+      <div class="stat"><b>14 yrs</b><span>Field experience</span></div>
+      <div class="stat"><b>4 states</b><span>FTTH deployments</span></div>
+      <div class="stat"><b>0</b><span>Insurance claims</span></div>
+    </div>
+  </div>
+  <div class="fiber-line" aria-hidden="true"></div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <span class="eyebrow">What we do</span>
+    <h2>Last-mile fiber, end to end</h2>
+    <p class="intro">From the pedestal to a working connection in the customer's home — installation, termination, testing, and activation handled by certified technicians.</p>
+    <div class="svc-grid">
+      <div class="svc">
+        <h3>Fiber Installation</h3>
+        <ul>
+          <li>Drop installations from pedestal to premises</li>
+          <li>Copper-to-fiber network cutovers</li>
+          <li>Demarcation point installation</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Splicing &amp; Connection</h3>
+        <ul>
+          <li>Fusion splicing at the customer premises</li>
+          <li>Drop fiber splicing &amp; termination</li>
+          <li>CO &amp; street cabinet splitter connections</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Premises Wiring &amp; CPE</h3>
+        <ul>
+          <li>Indoor fiber wiring &amp; termination</li>
+          <li>Inside wiring for residential &amp; small business</li>
+          <li>CPE installation &amp; configuration</li>
+          <li>Router &amp; gateway setup</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>WiFi &amp; Service Activation</h3>
+        <ul>
+          <li>Whole-home WiFi setup &amp; optimization</li>
+          <li>Wireless bridge links to detached shops &amp; outbuildings</li>
+          <li>ONT installation &amp; configuration</li>
+          <li>VoIP &amp; video/IPTV provisioning</li>
+          <li>Customer testing &amp; acceptance</li>
+        </ul>
+      </div>
+      <div class="svc">
+        <h3>Testing &amp; QA</h3>
+        <ul>
+          <li>OTDR testing</li>
+          <li>Optical power meter verification</li>
+          <li>Fiber endface scoping &amp; inspection</li>
+          <li>Documented results on every install</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:28px;background:var(--ink);padding:30px 32px;border-left:6px solid var(--safety)">
+      <h3 style="color:#fff;font-size:20px;margin-bottom:8px">WiFi that reaches the shop</h3>
+      <p style="color:#C9DAE6;font-size:16px;max-width:780px">In rural Iowa, the work happens in the shop, the barn, and the outbuilding — and that's exactly where home WiFi gives up. We install professional point-to-point wireless bridges that carry your fiber connection across the yard: weather-rated hardware, clean mounting, real throughput where you actually need it.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:72px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow">Why it matters</span>
+    <h2>The last hundred feet are the hardest</h2>
+    <p class="intro" style="margin-bottom:0">A fiber network is judged by its final connection. Drop placement and premises work happen on private property — inside someone's home or business — where craftsmanship, care, and communication matter as much as splice loss. That's the part of FTTH we specialize in: every install tested, documented, and left clean, so the network owner's reputation is protected at every address.</p>
+  </div>
+</section>
+
+<section class="dark" id="experience">
+  <div class="wrap">
+    <span class="eyebrow">Track record</span>
+    <h2>Built on rural broadband deployments</h2>
+    <p class="intro">Our founder's FTTH career spans cooperative and municipal fiber projects across the Midwest — the networks that bring high-speed internet to communities that never had it.</p>
+    <div class="timeline">
+      <div class="tl">
+        <span class="when">2019 — KANSAS &amp; MISSOURI</span>
+        <h3>Craw-Kan Telephone Cooperative</h3>
+        <p>Rural FTTH deployment serving cooperative member towns across southeast Kansas and Missouri — full installation scope: drops, premises wiring, activation.</p>
+      </div>
+      <div class="tl">
+        <span class="when">2020–2023 — IOWA</span>
+        <h3>Cedar Falls Utilities Fiber</h3>
+        <p>Lead installer on a municipal utility fiber network — approximately 2,900 FTTH installations completed across Cedar Falls, Janesville, New Hartford, and Hudson.</p>
+      </div>
+      <div class="tl">
+        <span class="when">2020–2021 — MINNESOTA</span>
+        <h3>Garden Valley Technologies</h3>
+        <p>Rural FTTH deployment in Thief River Falls — ~200 installations through a Minnesota winter on a small, high-trust crew where every connection had to hold.</p>
+      </div>
+      <div class="tl">
+        <span class="when">2023–PRESENT — IOWA</span>
+        <h3>South Slope Cooperative Communications</h3>
+        <p>Ongoing cooperative FTTH deployment in Iowa's eastern corridor, in partnership with prime contractor MP Nexlevel LLC — 1,800+ installations completed since August 2024 at a sustained pace of 50–60 installs per week across the team, with zero payment disputes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="credentials">
+  <div class="wrap">
+    <span class="eyebrow">Credentials</span>
+    <h2>Certified, insured, compliant</h2>
+    <div class="cred-grid">
+      <div class="cred">
+        <span class="mono">Certifications</span>
+        <h3>Industry-certified technicians</h3>
+        <p>Certified Fiber Optic Technician (CFOT) — Fiber Optic Association. Certified Fiber to the Home Professional (CFHP) — Fiber Broadband Association. OSHA 30-Hour Construction Industry.</p>
+      </div>
+      <div class="cred">
+        <span class="mono">Insurance</span>
+        <h3>Fully insured operations</h3>
+        <p>Commercial general liability ($1M/$2M), commercial auto, umbrella, and workers' compensation coverage — with Additional Insured endorsements available for primes and end clients. Zero claims since inception.</p>
+      </div>
+      <div class="cred">
+        <span class="mono">Company</span>
+        <h3>Iowa LLC in good standing</h3>
+        <p>TSVIT LLC, an Iowa limited liability company (est. 2023), operating as Noble Comm. Owner-operated from North Liberty, Iowa, with full state and federal compliance.</p>
+      </div>
+      <div class="cred">
+        <span class="mono">Workforce</span>
+        <h3>We train fiber technicians</h3>
+        <p>Field-based training program that has taken a technician from zero fiber experience to independent FTTH installations — helping close the industry's documented technician shortage.</p>
+      </div>
+    </div>
+    <span class="eyebrow" style="margin-top:56px">Service area</span>
+    <h2 style="font-size:26px">Iowa home base. Midwest reach.</h2>
+    <div class="states">
+      <span class="state home">Iowa — HQ</span>
+      <span class="state">Missouri</span>
+      <span class="state">Minnesota</span>
+      <span class="state">Kansas</span>
+      <span class="state">Wisconsin</span>
+      <span class="state">Nebraska</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's talk about your deployment</h2>
+    <p style="max-width:560px;margin-top:14px">Prime contractors, cooperatives, and broadband providers — we're ready to discuss installation capacity, scheduling, and rates.</p>
+    <p style="margin-top:30px"><a class="mail" href="mailto:contact@noblecomm.com">contact@noblecomm.com</a></p>
+    <p class="detail">Noble Comm · North Liberty, Iowa<br>Serving Iowa and the surrounding Midwest</p>
+  </div>
+  <div class="fiber-line" aria-hidden="true"></div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 TSVIT LLC dba Noble Comm. All rights reserved.</span>
+    <span class="mono">Iowa Business No. 738270</span>
+  </div>
+</footer>
+
+</body>
+</html>
